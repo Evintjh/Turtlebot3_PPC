@@ -1,0 +1,21 @@
+<launch>
+    <!-- Arguments -->
+    <arg name="set_odom_frame" default="odom"/>
+    <arg name="set_base_frame" default="base_link"/>
+    <arg name="set_map_frame" default="map"/> 
+
+    <!-- Set static_map parameter to false -->
+    <param name="move_base/global_costmap/static_map" value="false"/>
+
+    <!-- Set rolling_window parameter to true -->
+    <param name="move_base/global_costmap/rolling_window" value="true"/>
+
+    <node pkg="follow_waypoints" type="pure_pursuit.py" name="pure_pursuit" output="screen">
+        <param name="map_frame" value="$(arg set_map_frame)" />
+        <param name="base_frame" value="$(arg set_base_frame)" />
+        <param name="ld_gain" value="1.0" />
+        <param name="min_ld" value="0.5" />
+        <param name="car_wheel_base" value="0.22" />
+        <param name="controller_freq" value="10" />
+    </node>
+</launch>
