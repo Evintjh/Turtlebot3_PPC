@@ -2,7 +2,7 @@
 
 - Turtlebot3 in Gazebo environment 
 - Purepursuit for steering control along with PID for velocity control
-- Tune self.min_ld_ to adjust trajectory smoothness
+- Tune self.min_ld_ to adjust look ahead distance and trajectory smoothness
 
 
 To generate self-customised path manually:
