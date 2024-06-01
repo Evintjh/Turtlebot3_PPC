@@ -10,7 +10,7 @@ To generate self-customised path manually:
 - Once done, run waypoints_path.py to generate out a path to track with the points collected.
 
 To generate A* path:
-- rosrun goto_mover goto_mover.py
+- rosrun goto_mover goto_astar.py
 - input x and y coordinates of goal
 
 To begin Pure Pursuit:
